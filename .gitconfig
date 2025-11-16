@@ -1,0 +1,30 @@
+[includeIf "gitdir:~/Code/"]
+	path = ~/.gitconfig-personal
+
+[includeIf "gitdir:~/.dotfiles/"]
+  path = ~/.gitconfig-personal
+
+[alias]
+	lol = log --oneline --graph --decorate
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%C(cyan)\\ [%cn]%Creset\\ %Cgreen<%cr>" --decorate --no-merges
+	lsm = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%C(cyan)\\ [%cn]%Creset\\ %Cgreen<%cr>" --decorate
+	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%C(cyan)\\ [%cn]%Creset\\ %Cgreen<%cd>%Creset" --decorate --numstat
+	la = "!git config -l | grep alias | cut -c 7-"
+	lgr = log --graph --all --pretty=format:'%C(yellow)%h -%C(auto)%d %C(bold cyan)%s %C(bold white)(%cr)%Creset %C(dim white)<%an>'
+
+[core]
+	excludesfile = ~/.gitignore
+
+[push]
+	default = matching
+	
+[color]
+  	diff = auto
+  	status = auto
+  	branch = auto
+  	interactive = auto
+  	ui = true
+  	pager = true
+[init]
+	defaultBranch = main
