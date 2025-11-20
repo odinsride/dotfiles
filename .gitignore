@@ -1,0 +1,65 @@
+# Ignore everything by default
+*
+
+# Explicitly track dotfiles and configs
+!.gitignore
+!.gitconfig
+!.config/
+!.config/fish/
+!.config/fish/**
+!.config/kitty/
+!.config/kitty/**
+!.config/nvim/
+!.config/nvim/**
+!.config/starship.toml
+!.config/mpv/
+!.config/mpv/**
+!.config/ranger/
+!.config/ranger/**
+!README.md
+
+# Ignore OS-specific files
+.DS_Store
+.Trash/
+.CFUserTextEncoding
+
+# Ignore cache and runtime files
+.cache/
+.local/share/
+.local/state/
+
+# Ignore sensitive data
+.ssh/
+.aws/
+.gnupg/
+
+# Ignore IDE and editor files
+.vscode/
+.cursor/
+
+# Ignore language-specific
+.npm/
+.cargo/
+.gem/
+.bundle/
+.yarn/
+node_modules/
+
+# Ignore macOS-specific
+Library/
+Applications/
+Desktop/
+Documents/
+Downloads/
+Movies/
+Music/
+Pictures/
+Public/
+Creative Cloud Files*/
+
+# Ignore shell history
+.bash_history
+.zsh_history
+.python_history
+.psql_history
+.lesshst
