@@ -2,9 +2,6 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
-# Initialize Starship prompt
-starship init fish | source
-
 # Fish shell configuration converted from zsh
 # Add Homebrew to PATH (Apple Silicon Mac)
 set -gx PATH /opt/homebrew/bin /opt/homebrew/sbin $PATH
@@ -20,6 +17,9 @@ end
 
 # THOR merge tool
 set -gx THOR_MERGE /Users/sitheris/.local/bin/app_update_thor_merge_tool
+
+# Initialize Starship prompt
+starship init fish | source
 
 # Aliases
 alias ssha='eval (ssh-agent -c); and ssh-add'
