@@ -1,5 +1,6 @@
 [aws]
-symbol = "  "
+# symbol = "  "
+disabled = true
 
 [buf]
 symbol = " "
