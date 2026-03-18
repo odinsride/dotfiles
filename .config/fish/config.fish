@@ -20,3 +20,4 @@ if test (uname) = Darwin
 else if test (uname) = Linux
     source ~/.config/fish/linux.fish
 end
+/home/sitheris/.local/bin/mise activate fish | source
