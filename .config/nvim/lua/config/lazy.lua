@@ -21,6 +21,9 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
+-- Disable unused providers
+vim.g.loaded_perl_provider = 0
+
 -- Setup lazy.nvim
 require("lazy").setup({
   spec = {
@@ -32,4 +35,6 @@ require("lazy").setup({
   install = { colorscheme = { "habamax" } },
   -- automatically check for plugin updates
   checker = { enabled = true },
+  -- disable luarocks/hererocks (no plugins need it)
+  rocks = { enabled = false },
 })
