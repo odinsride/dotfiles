@@ -23,11 +23,8 @@ end
 /home/sitheris/.local/bin/mise activate fish | source
 
 # pnpm
-set -gx PNPM_HOME "/home/sitheris/.local/share/pnpm"
+set -gx PNPM_HOME '$HOME/.local/share/pnpm'
 if not string match -q -- $PNPM_HOME $PATH
   set -gx PATH "$PNPM_HOME" $PATH
 end
 # pnpm end
-
-# Neon DB URLs (for mcp.json)
-set -gx OLUHOME_DATABASE_DEV_URL "postgresql://neondb_owner:npg_qiwk7egsG5Bj@ep-summer-recipe-amt5dlhk-pooler.c-5.us-east-1.aws.neon.tech/neondb?sslmode=require"
